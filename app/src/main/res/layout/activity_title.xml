@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:interpolator="@android:anim/accelerate_interpolator"
+    android:fromAlpha="1.0" android:toAlpha="0.0"
+    android:fillAfter="true"
+    android:duration="500"
+    tools:context="com.example.a158383.masseymapapp.Title">
+
+    <TextView
+        android:text="Massey Map App"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:gravity="center" />
+</RelativeLayout>
