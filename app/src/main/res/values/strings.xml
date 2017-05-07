@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Massey Map App</string>
+    <string name="access_token">sk.eyJ1IjoiZnJhbmNpc3RhbmciLCJhIjoiY2oyZTRvbXhsMDZ1czJ3dGhsNmc3Y3lwdSJ9.NV08iThL4-R8gkai702Y9Q</string>
 </resources>
