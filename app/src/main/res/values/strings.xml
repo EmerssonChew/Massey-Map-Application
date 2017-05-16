@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Massey Map App</string>
     <string name="access_token">sk.eyJ1IjoiZnJhbmNpc3RhbmciLCJhIjoiY2oyZTRvbXhsMDZ1czJ3dGhsNmc3Y3lwdSJ9.NV08iThL4-R8gkai702Y9Q</string>
+    <string name="back_button">Back Button</string>
+    <string name="auckland_campus">Auckland Campus</string>
+    <string name="search">Search</string>
+    <string name="satellite_view">Satellite View</string>
+    <string name="academic_departments">Academic Departments</string>
+    <string name="accommodation">Accommodation</string>
+    <string name="computer_labs">Computer Labs</string>
+    <string name="emergency_and_first_aid">Emergency and First Aid</string>
+    <string name="parking">Parking</string>
+    <string name="shops_food_and_atms">Shops, Food and ATMs</string>
+    <string name="student_and_staff_services">Student and Staff Services</string>
+    <string name="transport">Transport</string>
+    <string name="select_campus">Select Campus</string>
 </resources>

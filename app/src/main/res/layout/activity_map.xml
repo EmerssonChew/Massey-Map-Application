@@ -3,32 +3,34 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativelayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:interpolator="@android:anim/accelerate_interpolator"
-    android:fromAlpha="0.0" android:toAlpha="1.0"
-    android:duration="500"
-    tools:context=".Map" >
+    android:layout_height="match_parent">
 
     <com.mapbox.mapboxsdk.maps.MapView
-        android:id="@+id/mapview"
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="-36.7323894"
+        mapbox:mapbox_cameraTargetLng="174.70274110000003"
+        mapbox:mapbox_cameraZoom="15"
+
+        mapbox:mapbox_styleUrl="@string/mapbox_style_mapbox_streets" />
 
     <ImageButton
-        android:contentDescription="Back Button"
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_arrow_back_black_48dp"
-        android:scaleType="centerCrop"
-        app:backgroundTint="@color/lightGrey"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_margin="16dp"
-        android:clickable="true" />
+        android:clickable="true"
+        android:contentDescription="@string/back_button"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_arrow_back_black_48dp"
+        app:backgroundTint="@color/lightGrey" />
 
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
@@ -41,145 +43,143 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start" >
             <LinearLayout android:id="@+id/left_drawer"
-                android:orientation="vertical"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:background="@color/white" >
+                android:background="@color/white"
+                android:orientation="vertical">
 
                 <TextView
-                    android:text="Auckland Campus"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@color/lightGrey"
-                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"
                     android:padding="16dp"
-                    android:gravity="center_horizontal" />
+                    android:text="@string/auckland_campus"
+                    android:textColor="@color/black" />
 
                 <View style="@style/Divider"/>
 
                 <TextView
-                    android:text="Search"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/search"
+                    android:textColor="@color/black" />
 
                 <TextView
-                    android:text="Satellite View"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/satellite_view"
+                    android:textColor="@color/black" />
 
                 <View style="@style/Divider"/>
 
                 <TextView
-                    android:text="Academic Departments"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/academic_departments"
+                    android:textColor="@color/black" />
 
                 <TextView
-                    android:text="Accomodation"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/accommodation"
+                    android:textColor="@color/black" />
 
                 <TextView
-                    android:text="Computer Labs"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/computer_labs"
+                    android:textColor="@color/black" />
 
                 <TextView
-                    android:text="Emergency and First Aid"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/emergency_and_first_aid"
+                    android:textColor="@color/black" />
 
                 <TextView
-                    android:text="Parking"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/parking"
+                    android:textColor="@color/black" />
 
                 <TextView
-                    android:text="Shops, Food and ATMs"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/shops_food_and_atms"
+                    android:textColor="@color/black" />
 
                 <TextView
-                    android:text="Student and Staff Services"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/student_and_staff_services"
+                    android:textColor="@color/black" />
 
                 <TextView
-                    android:text="Transport"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/transport"
+                    android:textColor="@color/black" />
 
                 <View style="@style/Divider"/>
 
                 <TextView
-                    android:text="Select Campus"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:padding="16dp" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/select_campus"
+                    android:textColor="@color/black" />
             </LinearLayout>
         </ScrollView>
     </android.support.v4.widget.DrawerLayout>
-
-
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/zoom_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_zoom_out_black_48dp"
-        app:backgroundTint="@color/lightGrey"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true" />
+        android:clickable="true"
+        android:src="@mipmap/ic_zoom_out_black_48dp"
+        app:backgroundTint="@color/lightGrey" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/zoom_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_zoom_in_black_48dp"
-        app:backgroundTint="@color/lightGrey"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_above="@id/zoom_out"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true" />
+        android:clickable="true"
+        android:src="@mipmap/ic_zoom_in_black_48dp"
+        app:backgroundTint="@color/lightGrey" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/find_me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_my_location_black_48dp"
-        app:backgroundTint="@color/lightGrey"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_above="@id/zoom_in"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_margin="16dp"
-        android:clickable="true" />
+        android:clickable="true"
+        android:src="@mipmap/ic_my_location_black_48dp"
+        app:backgroundTint="@color/lightGrey" />
 </RelativeLayout>
